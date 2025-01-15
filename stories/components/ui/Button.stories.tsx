@@ -18,10 +18,24 @@ Default.args = {
   children: "Default Button",
 };
 
+export const DestructiveSmall = Template.bind({});
+DestructiveSmall.args = {
+  children: "Destructive Small",
+  variant: "destructive",
+  size: "sm",
+};
+
 export const Destructive = Template.bind({});
 Destructive.args = {
   children: "Destructive Button",
   variant: "destructive",
+};
+
+export const DestructiveLarge = Template.bind({});
+DestructiveLarge.args = {
+  children: "Destructive Large",
+  variant: "destructive",
+  size: "lg",
 };
 
 export const Outline = Template.bind({});
@@ -71,4 +85,10 @@ export const StandOutFilled = Template.bind({});
 StandOutFilled.args = {
   children: "StandOutFilled Button",
   variant: "standoutFilled",
+};
+
+export const Warning = Template.bind({});
+Warning.args = {
+  children: "Warning Button",
+  variant: "waring",
 };

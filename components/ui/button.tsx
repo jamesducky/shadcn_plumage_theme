@@ -13,6 +13,8 @@ const buttonVariants = cva(
           "bg-neutral-900 text-neutral-50 hover:bg-neutral-900/90 dark:bg-neutral-50 dark:text-neutral-900 dark:hover:bg-neutral-50/90",
         destructive:
           "bg-red-500 text-neutral-50 hover:bg-red-500/90 dark:bg-red-900 dark:text-neutral-50 dark:hover:bg-red-900/90",
+        waring:
+          "bg-warning-700 text-neutral-50 hover:bg-warning-700/80 dark:bg-warning-900 dark:text-neutral-50 dark:hover:bg-warning-900/90",
         outline:
           "border border-neutral-200 bg-white hover:bg-neutral-100 hover:text-neutral-900 dark:border-neutral-800 dark:bg-neutral-950 dark:hover:bg-neutral-800 dark:hover:text-neutral-50",
         secondary:
@@ -21,7 +23,7 @@ const buttonVariants = cva(
           "hover:bg-neutral-100 hover:text-neutral-900 dark:hover:bg-neutral-800 dark:hover:text-neutral-50",
         link: "text-neutral-900 underline-offset-4 hover:underline dark:text-neutral-50",
         standoutFilled:
-          "bg-standout border-standout-strong-dark bg-standout text-standout hover:border-standout-dark hover:bg-standout-hover active:border-standout active:bg-standout-active",
+          "border-standout-dark border-standout-strong-dark bg-standout text-standout hover:border-standout-dark/80 hover:bg-standout-hover active:border-standout active:bg-standout-active",
       },
       size: {
         default: "h-10 px-4 py-2",

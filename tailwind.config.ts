@@ -18,9 +18,9 @@ const config: Config = {
           300: "hsl(228, 9%, 90%)", // --plmg-color-background-neutral-strong
           500: "hsl(228, 6%, 58%)", // --plmg-color-border-neutral
           800: "hsl(228, 11%, 20%)", // Custom darker neutral
-          900: "hsl(228, 12%, 10%)", // Custom darkest neutral
+          900: "#008290", // --plmg-color-border-neutral-strong
           weak: "hsl(228, 6%, 58%)",
-          strong: "hsl(228, 9%, 90%)",
+          strong: "#008290",
           dark: "hsl(228, 12%, 10%)",
         },
         red: {
@@ -77,12 +77,12 @@ const config: Config = {
           900: "hsl(356, 52%, 38%)",
           strong: "hsl(356, 52%, 38%)",
         },
-        white: "hsl(0, 0%, 100%)", // --plmg-color-icon-neutral-inverted
+        white: "hsl(0, 0%, 100%)", //
       },
       borderRadius: {
-        lg: "0.5rem", // --radius-lg
-        md: "calc(0.5rem - 2px)", // --radius-md
-        sm: "calc(0.5rem - 4px)", // --radius-sm
+        lg: "1rem", // --radius-lg
+        md: "calc(2rem - 2px)", // --radius-md
+        sm: "calc(2rem - 4px)", // --radius-sm
       },
       ringOffsetWidth: {
         2: "2px", // Focus ring offset width
