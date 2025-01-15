@@ -66,3 +66,9 @@ IconOnly.args = {
   children: "🚀", // Example icon representation
   size: "icon",
 };
+
+export const StandOutFilled = Template.bind({});
+StandOutFilled.args = {
+  children: "StandOutFilled Button",
+  variant: "standoutFilled",
+};
