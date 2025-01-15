@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import tailwindcssAnimate from "tailwindcss-animate";
 
 const config: Config = {
   darkMode: ["class"],
@@ -87,8 +88,8 @@ const config: Config = {
         2: "2px", // Focus ring offset width
       },
     },
+    plugins: [tailwindcssAnimate],
   },
-  plugins: [require("tailwindcss-animate")],
 };
 
 export default config;
