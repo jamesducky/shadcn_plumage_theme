@@ -1,16 +1,27 @@
 {
-  "name": "shadcn_plumage_theme",
+  "name": "shadcn_plumage_playground",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "private": true,
+  "description": "Next.js + Storybook for ShadCN Plumage theme",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "dev:all": "concurrently \"npm run dev\" \"npm run storybook\""
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "dependencies": {
+    "@radix-ui/react-slot": "^1.1.1",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.471.1",
+    "next": "14.2.16",
+    "react": "^18",
+    "react-dom": "^18",
+    "tailwind-merge": "^2.6.0",
+    "tailwindcss-animate": "^1.0.7"
+  },
   "devDependencies": {
     "@chromatic-com/storybook": "^3.2.3",
     "@storybook/addon-essentials": "^8.5.0",
@@ -20,6 +31,15 @@
     "@storybook/nextjs": "^8.5.0",
     "@storybook/react": "^8.5.0",
     "@storybook/test": "^8.5.0",
-    "storybook": "^8.5.0"
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "concurrently": "^9.1.2",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.16",
+    "postcss": "^8",
+    "storybook": "^8.5.0",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5"
   }
 }

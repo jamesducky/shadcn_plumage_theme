@@ -1,0 +1,237 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer base {
+  :root {
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 255, 255, 255;
+    --background-end-rgb: 255, 255, 255;
+
+    /****************************************/
+    /* 1) Full Design Tokens (HSL, no -dark) */
+    /****************************************/
+
+    /* --plmg-color-* text tokens */
+    --plmg-color-text-neutral: hsl(228, 10%, 19%);
+    --plmg-color-text-netural-text: #2c2e36;
+    --plmg-color-text-neutral-weak: hsl(226, 10%, 26%); /* #3d404a */
+    --plmg-color-text-neutral-disabled: hsl(225, 10%, 41%); /* #5e6372 */
+
+    --plmg-color-text-primary: hsl(187, 100%, 13%); /* #003d44 */
+    --plmg-color-text-primary-strong: hsl(186, 100%, 24%); /* #006b76 */
+    --plmg-color-text-primary-strong-hover: hsl(186, 100%, 18%);
+    --plmg-color-text-primary-strong-active: hsl(187, 100%, 13%);
+
+    --plmg-color-text-danger: hsl(356, 52%, 22%);
+    --plmg-color-text-danger-strong: hsl(356, 52%, 40%);
+    --plmg-color-text-danger-strong-hover: hsl(356, 52%, 29%);
+    --plmg-color-text-danger-strong-active: hsl(356, 52%, 22%);
+
+    --plmg-color-text-success: hsl(120, 39%, 26%);
+    --plmg-color-text-success-strong: hsl(120, 38%, 35%);
+    --plmg-color-text-success-strong-hover: hsl(120, 39%, 29%);
+    --plmg-color-text-success-strong-active: hsl(120, 39%, 26%);
+
+    --plmg-color-text-warning: hsl(46, 93%, 20%);
+    --plmg-color-text-info: hsl(186, 100%, 13%);
+    --plmg-color-text-info-strong: hsl(192, 100%, 28%);
+    --plmg-color-text-info-strong-hover: hsl(189, 100%, 20%);
+    --plmg-color-text-info-strong-active: hsl(186, 100%, 13%);
+    --plmg-color-text-standout: hsl(18, 76%, 20%);
+    --plmg-color-text-standout-strong: hsl(14, 74%, 40%);
+    --plmg-color-text-standout-strong-hover: hsl(14, 76%, 29%);
+    --plmg-color-text-standout-strong-active: hsl(18, 76%, 20%);
+
+    /* --plmg-color-* background tokens */
+    --plmg-color-background-neutral: hsl(0, 0%, 100%);
+    --plmg-color-background-neutral-hover: hsl(240, 2%, 97%);
+    --plmg-color-background-neutral-active: hsl(240, 4%, 95%);
+    --plmg-color-background-neutral-weak: hsl(240, 2%, 97%);
+    --plmg-color-background-neutral-medium: hsl(240, 4%, 95%);
+    --plmg-color-background-neutral-strong: hsl(228, 9%, 90%);
+
+    --plmg-color-background-primary: hsl(186, 30%, 86%);
+    --plmg-color-background-primary-hover: hsl(186, 44%, 73%);
+    --plmg-color-background-primary-active: hsl(186, 51%, 61%);
+    --plmg-color-background-primary-strong: hsl(186, 100%, 28%);
+    --plmg-color-background-primary-strong-hover: hsl(186, 100%, 24%);
+    --plmg-color-background-primary-strong-active: hsl(186, 100%, 18%);
+
+    --plmg-color-background-danger: hsl(3, 90%, 90%);
+    --plmg-color-background-danger-hover: hsl(356, 60%, 81%);
+    --plmg-color-background-danger-active: hsl(356, 63%, 76%);
+    --plmg-color-background-danger-strong: hsl(356, 52%, 38%);
+    --plmg-color-background-danger-strong-hover: hsl(356, 52%, 30%);
+    --plmg-color-background-danger-strong-active: hsl(356, 52%, 24%);
+
+    --plmg-color-background-success: hsl(120, 39%, 88%);
+    --plmg-color-background-success-hover: hsl(120, 39%, 77%);
+    --plmg-color-background-success-active: hsl(120, 39%, 65%);
+    --plmg-color-background-success-strong: hsl(120, 38%, 35%);
+    --plmg-color-background-success-strong-hover: hsl(120, 39%, 29%);
+    --plmg-color-background-success-strong-active: hsl(120, 39%, 26%);
+
+    --plmg-color-background-warning: hsl(48, 100%, 93%);
+    --plmg-color-background-warning-hover: hsl(48, 100%, 86%);
+    --plmg-color-background-warning-active: hsl(48, 100%, 80%);
+
+    --plmg-color-background-info: hsl(186, 47%, 89%);
+    --plmg-color-background-info-hover: hsl(186, 62%, 78%);
+    --plmg-color-background-info-active: hsl(187, 60%, 63%);
+    --plmg-color-background-info-strong: hsl(192, 100%, 28%);
+    --plmg-color-background-info-strong-hover: hsl(189, 100%, 20%);
+    --plmg-color-background-info-strong-active: hsl(186, 100%, 13%);
+
+    --plmg-color-background-standout: hsl(18, 100%, 73%);
+    --plmg-color-background-standout-hover: hsl(16, 100%, 63%);
+    --plmg-color-background-standout-active: hsl(14, 100%, 54%);
+    --plmg-color-background-standout-strong: hsl(14, 74%, 40%);
+    --plmg-color-background-standout-strong-hover: hsl(14, 76%, 29%);
+    --plmg-color-background-standout-strong-active: hsl(18, 76%, 20%);
+
+    /* --plmg-color-* border tokens */
+    --plmg-color-border-neutral: hsl(228, 6%, 58%);
+    --plmg-color-border-neutral-weak: hsl(228, 9%, 78%);
+    --plmg-color-border-neutral-strong: hsl(228, 11%, 50%);
+
+    --plmg-color-border-primary: hsl(186, 100%, 33%);
+    --plmg-color-border-primary-weak: hsl(186, 44%, 73%);
+    --plmg-color-border-primary-strong: hsl(186, 100%, 28%);
+
+    --plmg-color-border-danger: hsl(356, 70%, 53%);
+    --plmg-color-border-danger-weak: hsl(356, 60%, 81%);
+    --plmg-color-border-danger-strong: hsl(356, 52%, 38%);
+
+    --plmg-color-border-success: hsl(120, 39%, 57%);
+    --plmg-color-border-success-weak: hsl(120, 39%, 29%);
+    --plmg-color-border-success-strong: hsl(120, 38%, 35%);
+
+    --plmg-color-border-warning: hsl(49, 92%, 43%);
+    --plmg-color-border-warning-weak: hsl(48, 100%, 86%);
+    --plmg-color-border-warning-strong: hsl(46, 93%, 20%);
+
+    --plmg-color-border-info: hsl(187, 100%, 39%);
+    --plmg-color-border-info-weak: hsl(186, 62%, 78%);
+    --plmg-color-border-info-strong: hsl(192, 100%, 28%);
+
+    --plmg-color-border-standout: hsl(16, 76%, 46%);
+    --plmg-color-border-standout-weak: hsl(14, 100%, 82%);
+    --plmg-color-border-standout-strong: hsl(14, 74%, 40%);
+
+    /* --plmg-color-* icon tokens */
+    --plmg-color-icon-neutral: hsl(225, 10%, 41%);
+    --plmg-color-icon-neutral-hover: hsl(228, 9%, 31%);
+    --plmg-color-icon-neutral-active: hsl(226, 10%, 26%);
+    --plmg-color-icon-neutral-inverted: hsl(0, 0%, 100%);
+
+    --plmg-color-icon-primary: hsl(186, 100%, 24%);
+    --plmg-color-icon-primary-hover: hsl(186, 100%, 18%);
+    --plmg-color-icon-primary-active: hsl(187, 100%, 13%);
+
+    --plmg-color-icon-danger: hsl(356, 52%, 40%);
+    --plmg-color-icon-danger-hover: hsl(356, 52%, 30%);
+    --plmg-color-icon-danger-active: hsl(356, 52%, 22%);
+
+    --plmg-color-icon-success: hsl(120, 38%, 35%);
+    --plmg-color-icon-success-hover: hsl(120, 39%, 29%);
+    --plmg-color-icon-success-active: hsl(120, 39%, 26%);
+
+    --plmg-color-icon-warning: hsl(46, 93%, 20%);
+    --plmg-color-icon-info: hsl(192, 100%, 28%);
+    --plmg-color-icon-info-hover: hsl(189, 100%, 20%);
+    --plmg-color-icon-info-active: hsl(186, 100%, 13%);
+    --plmg-color-icon-standout: hsl(14, 74%, 40%);
+    --plmg-color-icon-standout-hover: hsl(14, 76%, 29%);
+    --plmg-color-icon-standout-active: hsl(18, 76%, 20%);
+
+    /* --plmg-color-* decoration tokens */
+    --plmg-color-decoration-neutral: hsl(228, 11%, 50%);
+    --plmg-color-decoration-neutral-weak: hsl(228, 9%, 78%);
+
+    --plmg-color-decoration-primary: hsl(185, 72%, 51%);
+    --plmg-color-decoration-primary-weak: hsl(186, 44%, 73%);
+
+    --plmg-color-decoration-danger: hsl(356, 62%, 64%);
+    --plmg-color-decoration-danger-weak: hsl(356, 60%, 81%);
+
+    --plmg-color-decoration-success: hsl(120, 39%, 58%);
+    --plmg-color-decoration-success-weak: hsl(120, 39%, 77%);
+
+    --plmg-color-decoration-warning: hsl(48, 100%, 50%);
+    --plmg-color-decoration-warning-weak: hsl(48, 100%, 86%);
+
+    --plmg-color-decoration-info: hsl(187, 72%, 52%);
+    --plmg-color-decoration-info-weak: hsl(186, 62%, 78%);
+
+    --plmg-color-decoration-standout: hsl(14, 100%, 54%);
+    --plmg-color-decoration-standout-weak: hsl(14, 100%, 82%);
+
+    /* Shadows, border widths, spacing, typography, etc. omitted here for brevity */
+
+    /********************************************/
+    /* 2) Map Your Existing (Light Mode) Palette */
+    /********************************************/
+
+    /* “Light mode” custom properties, pointing to the tokens above */
+    --background: var(--plmg-color-background-neutral);
+    --foreground: var(--plmg-color-text-neutral);
+
+    --card: var(--plmg-color-background-neutral);
+    --card-foreground: var(--plmg-color-text-neutral);
+
+    --popover: var(--plmg-color-background-neutral);
+    --popover-foreground: var(--plmg-color-text-neutral);
+
+    /* Typically your brand or primary color might be “--plmg-color-background-primary-strong” */
+    --primary: var(--plmg-color-background-primary-strong);
+    --primary-foreground: var(--plmg-color-text-primary-strong-hover);
+
+    /* Secondary might be a subtle background or accent color */
+    --secondary: var(--plmg-color-background-neutral-strong);
+    --secondary-foreground: var(--plmg-color-text-primary);
+
+    /* “Muted” or subdued backgrounds, etc. */
+    --muted: var(--plmg-color-background-neutral-medium);
+    --muted-foreground: var(--plmg-color-text-neutral-disabled);
+
+    --accent: var(--plmg-color-background-primary);
+    --accent-foreground: var(--plmg-color-text-primary);
+
+    /* “Destructive” = Danger */
+    --destructive: var(--plmg-color-background-danger-strong);
+    --destructive-foreground: var(--plmg-color-text-danger-strong-hover);
+
+    /* “Border” & “Input” */
+    --border: var(--plmg-color-border-neutral);
+    --input: var(--plmg-color-border-neutral-weak);
+
+    /* “Ring” (focus ring) might reference a primary or accent color */
+    --ring: var(--plmg-color-border-primary);
+
+    /*
+      Example “chart-n” colors can map to your decoration or standout tokens
+      Adjust them as you see fit for data viz
+    */
+    --chart-1: var(--plmg-color-decoration-standout); /* hsl(14, 100%, 54%) */
+    --chart-2: var(--plmg-color-decoration-success); /* hsl(120, 39%, 58%) */
+    --chart-3: var(--plmg-color-decoration-info); /* hsl(187, 72%, 52%) */
+    --chart-4: var(--plmg-color-decoration-warning); /* hsl(48, 100%, 50%) */
+    --chart-5: var(--plmg-color-decoration-danger); /* hsl(356, 62%, 64%) */
+
+    /*
+      Any radius tokens, or use the value from your snippet directly
+    */
+    --radius: 0.5rem;
+  }
+}
