@@ -12,12 +12,12 @@ const config: Config = {
     sans: ["Commissioner", "sans-serif"],
     mono: ["JetBrains Mono", "monospace"],
   },
-
   theme: {
     extend: {
       colors: {
         neutral: {
           50: "#ffffff", // --plmg-color-text-primary:
+          // 50: "'#000000",
           100: "#f5f5f5",
           200: "#e5e5e5",
           300: "#d4d4d4",
@@ -26,8 +26,8 @@ const config: Config = {
           600: "#525252",
           700: "#404040",
           800: "#262626",
-          // 900: "#171717",
-          900: "#FF69B4",
+          900: "#171717",
+          // 900: "#FF69B4",
           950: "#0a0a0a",
         },
         teal: {
@@ -46,19 +46,19 @@ const config: Config = {
       },
     },
     borderWidth: {
-      DEFAULT: "6px",
+      DEFAULT: "12px",
     },
     borderRadius: {
       none: "0px", //plmg-border-radius-sharp: 0px;
       sm: "4px", // plmg-border-radius-s: 4px;
       DEFAULT: "20px", // plmg-border-radius-m: 8px;
-      md: "8px", // plmg-border-radius-m: 8px;
+      md: "20px", // plmg-border-radius-m: 8px;
       lg: "16px", // plmg-border-radius-l: 16px;
       xl: "20px", // plmg-border-radius-xl: 32px;
       full: "9999px",
     },
     ringOffsetWidth: {
-      2: "8px", // Focus ring offset width
+      2: "2px", // Focus ring offset width
     },
   },
   plugins: [tailwindcssAnimate],
