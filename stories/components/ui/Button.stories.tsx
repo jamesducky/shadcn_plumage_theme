@@ -17,14 +17,6 @@ export const Default = Template.bind({});
 Default.args = {
   children: "Default Button",
 };
-export const DefaultSizes = () => (
-  <div className="flex items-center gap-4">
-    <Button size="sm">Default Small</Button>
-    <Button>Default Button</Button>
-    <Button size="lg">Default Large</Button>
-    <Button size="xl">Default Extra Large</Button>
-  </div>
-);
 
 export const Primary = Template.bind({});
 Primary.args = {
