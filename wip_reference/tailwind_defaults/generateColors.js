@@ -286,3 +286,40 @@ const colors = {
     950: "#4c0519",
   },
 };
+
+const fs = require("fs");
+const path = require("path");
+
+// Path to the input and output files
+const outputFilePath = "./colors.css";
+
+// Function to flatten the color object into CSS variables
+function flattenColorsToCSS(obj, prefix = "--color") {
+  const cssLines = [];
+
+  function recurse(subObj, currentPrefix) {
+    for (const key in subObj) {
+      if (typeof subObj[key] === "object") {
+        recurse(subObj[key], `${currentPrefix}-${key}`);
+      } else {
+        cssLines.push(`${currentPrefix}-${key}: ${subObj[key]};`);
+      }
+    }
+  }
+
+  recurse(obj, prefix);
+  return cssLines;
+}
+
+// Generate CSS variables
+const cssVariables = flattenColorsToCSS(colors);
+const cssOutput = `:root {\n  ${cssVariables.join("\n  ")}\n}`;
+
+// Write to the output file
+fs.writeFileSync(outputFilePath, cssOutput, "utf8");
+
+console.log(
+  `CSS variables have been generated and saved to ${path.resolve(
+    outputFilePath
+  )}`
+);

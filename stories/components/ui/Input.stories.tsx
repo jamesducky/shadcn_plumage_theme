@@ -48,7 +48,7 @@ export const Small: Story = {
   args: {
     type: "text",
     placeholder: "Small input",
-    className: "h-8 text-sm",
+    size: "sm",
   },
 };
 
@@ -56,6 +56,22 @@ export const Large: Story = {
   args: {
     type: "text",
     placeholder: "Large input",
-    className: "h-12 text-lg",
+    size: "lg",
+  },
+};
+
+export const Outline: Story = {
+  args: {
+    type: "text",
+    placeholder: "Outline input",
+    variant: "outline",
+  },
+};
+
+export const Filled: Story = {
+  args: {
+    type: "text",
+    placeholder: "Filled input",
+    variant: "filled",
   },
 };

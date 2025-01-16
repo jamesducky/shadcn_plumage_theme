@@ -18,6 +18,12 @@ Default.args = {
   children: "Default Button",
 };
 
+export const Primary = Template.bind({});
+Primary.args = {
+  children: "Primary Button",
+  variant: "primary",
+};
+
 export const DestructiveSmall = Template.bind({});
 DestructiveSmall.args = {
   children: "Destructive Small",

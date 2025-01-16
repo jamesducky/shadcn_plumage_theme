@@ -26,6 +26,22 @@ const config: Config = {
       900: "#171717",
       950: "#0a0a0a",
     },
+    teal: {
+      50: "#f0fdfa",
+      100: "#ccfbf1",
+      200: "#99f6e4",
+      300: "#5eead4",
+      400: "#2dd4bf",
+      500: "#14b8a6",
+      600: "#008290", // --plmg-color-background-primary-strong
+      700: "#0f766e",
+      800: "#115e59",
+      900: "#134e4a",
+      950: "#042f2e",
+    },
+    borderWidth: {
+      DEFAULT: "2px",
+    },
     borderRadius: {
       none: "0px", //plmg-border-radius-sharp: 0px;
       // no tailwind default to override for - plmg-border-radius-xs: 2px;
@@ -38,7 +54,7 @@ const config: Config = {
       full: "9999px",
     },
     ringOffsetWidth: {
-      2: "2px", // Focus ring offset width
+      2: "6px", // Focus ring offset width
     },
   },
   plugins: [tailwindcssAnimate],
