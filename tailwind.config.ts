@@ -9,6 +9,10 @@ const config: Config = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    fontFamily: {
+      sans: ["Commissioner", "sans-serif"],
+      mono: ["JetBrains Mono", "monospace"],
+    },
     extend: {
       colors: {
         neutral: {
@@ -80,9 +84,15 @@ const config: Config = {
         white: "hsl(0, 0%, 100%)", //
       },
       borderRadius: {
-        lg: "1rem", // --radius-lg
-        md: "calc(2rem - 2px)", // --radius-md
-        sm: "calc(2rem - 4px)", // --radius-sm
+        none: "0px", //plmg-border-radius-sharp: 0px;
+        // no tailwind default to override for - plmg-border-radius-xs: 2px;
+        sm: "4px", // plmg-border-radius-s: 4px;
+        DEFAULT: "8px", // plmg-border-radius-m: 8px;
+        md: "8px", // plmg-border-radius-m: 8px;
+        lg: "16px", // plmg-border-radius-l: 16px;
+        xl: "32px", // plmg-border-radius-xl: 32px;
+        // no tailwind default to override --plmg-border-radius-circle: 50%;
+        full: "9999px",
       },
       ringOffsetWidth: {
         2: "2px", // Focus ring offset width
